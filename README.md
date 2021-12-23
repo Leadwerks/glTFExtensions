@@ -2,4 +2,4 @@
 Ultra Engine glTF Extensions
 
 ## Extensions
-- [ULTRA_PhysicsColliders](ULTRA_PhysicsColliders.md)
+- [ULTRA_CollisionShaoes](ULTRA_CollisionShaoes.md)
