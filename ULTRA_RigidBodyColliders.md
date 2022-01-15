@@ -12,6 +12,15 @@ For cylinder and cone shapes, the Y axis is the axis around which the shape is "
 
 Rotation can use four components to specicify a quaternion, or three components to specify Euler rotation.
 
+Shape is a string value, and can be any of the following:
+- BOX
+- CYLINDER
+- CONE
+- CAPSULE
+- SPHERE
+- CONVEX_HULL
+- MESH
+
 Alternatively, a 4x4 matrix can be used to specify the rotation and offset. If a matrix is used, the matrix must be normalized, and the size parameter must still be included.
 
 ```json
