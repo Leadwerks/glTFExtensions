@@ -1,11 +1,11 @@
-# ULTRAENGINE_RigidBodyColliders
+# ULTRA_RigidBodyColliders
 
 This extension specifies collision shapes associated with a glTF node, for physics simulations and raycasting.
 
 ```json
 "extensions":
 {
-  "ULTRAENGINE_RigidBodyColliders":
+  "ULTRA_RigidBodyColliders":
   {
     "colliders":
     [
