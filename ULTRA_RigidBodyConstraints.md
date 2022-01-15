@@ -1,9 +1,9 @@
-# ULTRA_RigidBodyJoints
+# ULTRA_RigidBodyConstraints
 
 ```json
 "extensions":
 {
-  "ULTRA_RigidBodyJoints":
+  "ULTRA_RigidBodyConstraints":
   {
     "joints":
     [
