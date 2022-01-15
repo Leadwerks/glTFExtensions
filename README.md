@@ -2,5 +2,5 @@
 Ultra Engine glTF extensions
 
 ## Extensions
-- [ULTRA_RigidBodies](ULTRA_RigidBodies.md)
+- [ULTRAENGINE_RigidBodyColliders](ULTRAENGINE_RigidBodyColliders.md)
 - [ULTRA_RigidBodyConstraints](ULTRA_RigidBodyConstraints.md)
