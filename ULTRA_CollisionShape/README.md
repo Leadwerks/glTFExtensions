@@ -16,6 +16,27 @@ Written against the glTF 2.0 spec.
 
 This extension adds support for collision shapes attached to a glTF node, for physics simulations and raycasting.
 
+## Defining Collision Shapes
+
+Collision shapes are defined within a dictionary property in the glTF scene description file, by adding an extensions property to the top-level glTF 2.0 object and defining a ULTRA_CollisionShape property with an array inside it.
+
+Each light defines a mandatory type property that designates the type of light (directional, point or spot). The following example defines a white-colored directional light.
+
+"extensions": {
+    "ULTRA_CollisionShape" : {
+        "coliisionShapes": [
+            {
+                "size": [
+                    1.0,
+                    1.0,
+                    1.0
+                ],
+                "type": "box"
+            }
+        ]
+    }
+}
+
 For mesh and convex hull shapes, the vertices value is an index of a buffer view. The buffer view must specify three FLOAT values per vertex. The faces value is an index to an buffer view of integers with type INT8, INT32, or INT64. The format os the indices buffer view is as follows:
 
 ```numIndices, indices0, indice1...indiceN```
