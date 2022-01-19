@@ -108,4 +108,4 @@ The faces accessor must be made up of unsigned bytes, unsigned shorts, or unsign
 
 ```numIndices, indices0, indice1...indiceN```
 
-Each face can include three or more indices.
+Each face can specify three or more indices.
