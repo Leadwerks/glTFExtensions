@@ -1,6 +1,6 @@
 # ULTRA_CollisionShape
 
-## Constributors
+## Contributors
 
 - Josh Klint, Ultra Engine
 
