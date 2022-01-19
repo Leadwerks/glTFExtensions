@@ -104,7 +104,7 @@ Mesh and convex hull shape definitions use two additional properties:
 
 The vertices accessor specifies three float values per vertex.
 
-The faces accessor must be made up of unsigned bytes, unsigned shorts, or unsigned integers. Each face starts with an integer indicating the number of indices in the face, followed by that number of indices.
+The faces accessor must be made up of unsigned bytes, unsigned shorts, or unsigned integers. Each face starts with the number of indices in the face, followed by that number of indices:
 
 ```numIndices, indices0, indice1...indiceN```
 
