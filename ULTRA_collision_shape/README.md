@@ -41,14 +41,16 @@ Each collision shape defines a mandatory type property that designates the type 
 
 ## Adding Collision Shape Instances to Nodes
 
-Collision shapes must be attached to a node by defining the extensions.ULTRA_collision_shape property and, within that, an index into the collision shapes array using the collisionShape property.
+Collision shapes must be attached to a node by defining the extensions.ULTRA_collision_shape property and, within that, an index into the collision shapes array using the collisionShapes property. Multiple collision shapes per node are supported.
 
 ```json
 "nodes" : [
     {
         "extensions" : {
-            "ULTRA_collision_shape" : {
-                "collisionShape" : 0
+            "ULTRA_collision_shapes" : {
+                "collisionShapes" : [
+                    0
+                ]
             }
         }
     }            
