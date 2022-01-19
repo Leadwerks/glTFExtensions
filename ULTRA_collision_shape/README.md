@@ -20,7 +20,7 @@ This extension adds support for collision shapes attached to a glTF node, for ph
 
 Collision shapes are defined within a dictionary property in the glTF scene description file, by adding an extensions property to the top-level glTF 2.0 object and defining a ULTRA_collision_shape property with an array inside it.
 
-Each collision shape defines a mandatory type property that designates the type of shape (box, cylinder, cone, capsule, sphere, mesh, or convex_hull). The following example defines a box with dimensions of one unit:
+Each collision shape defines a mandatory type property that designates the type of shape (box, cylinder, cone, capsule, ellipsoid, mesh, or convex_hull). The following example defines a box with dimensions of one unit:
 
 ```json
 "extensions": {
@@ -88,8 +88,8 @@ The following collision shapes are supported:
 - cone
 - convex_hull
 - cylinder
+- ellipsoid
 - mesh
-- sphere
 
 For cylinder, cone, and capsule shapes, the Y axis is the axis of the shape, with the cone tip pointing in the positive direction.
 
