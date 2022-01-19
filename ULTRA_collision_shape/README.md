@@ -107,7 +107,7 @@ The vertices accessor specifies three float values per vertex.
 
 The faces accessor must be made up of unsigned bytes, unsigned shorts, or unsigned integers.
 
-If the faceIndices property is present, each face will have the same number of indices.
+If the faceIndices property is present, each face will have the same number of indices. The value of faceIndices must be 3 or 4.
 
 If the faceIndices property is not present, each face starts with the number of indices in the face, followed by that number of indices:
 
