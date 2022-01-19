@@ -73,12 +73,12 @@ The collision shape will inherit the transform of the node, including scale. Sca
 The following collision shapes are supported:
 
 - box
-- cylinder
-- cone
 - capsule
-- sphere
+- cone
 - convex_hull
+- cylinder
 - mesh
+- sphere
 
 For cylinder, cone, and capsule shapes, the Y axis is the axis of the shape, with the cone tip pointing in the positive direction.
 
