@@ -27,6 +27,17 @@ Each collision shape defines a mandatory type property that designates the type 
     "ULTRA_collision_shape" : {
         "coliisionShapes": [
             {
+                "position": [
+                    0.0,
+                    0.0,
+                    0.0
+                ],
+                "rotation": [
+                    0.0,
+                    0.0,
+                    0.0,
+                    1.0
+                ],
                 "size": [
                     1.0,
                     1.0,
