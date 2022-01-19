@@ -88,11 +88,13 @@ Mesh and convex hull shape definitions use two additional properties:
 
 | Property | Description | Required |
 |---|---|---|
-| faces | Specifies an accessor that point to vertex data. | :white_check_mark: Yes |
+| faces | Specifies an accessor that points to vertex data. | :white_check_mark: Yes |
 | vertices | Specifies a accessor that points to face indice data. | :white_check_mark: Yes |
 
-The vertices bufferview must specify three float values per vertex.
+The vertices accessor specifies three float values per vertex.
 
-The faces bufferview must be made up of unsigned bytes, unsigned shorts, or unsigned integers. Each face starts with an integer indicating the number of indices in the face, followed by that number of indices. Each face can include three or more indices:
+The faces accessor must be made up of unsigned bytes, unsigned shorts, or unsigned integers. Each face starts with an integer indicating the number of indices in the face, followed by that number of indices.
 
 ```numIndices, indices0, indice1...indiceN```
+
+Each face can include three or more indices.
