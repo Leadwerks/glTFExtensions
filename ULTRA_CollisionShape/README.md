@@ -1,4 +1,4 @@
-# ULTRA_CollisionShape
+# ULTRA_collision_shape
 
 ## Contributors
 
@@ -18,13 +18,13 @@ This extension adds support for collision shapes attached to a glTF node, for ph
 
 ## Defining Collision Shapes
 
-Collision shapes are defined within a dictionary property in the glTF scene description file, by adding an extensions property to the top-level glTF 2.0 object and defining a ULTRA_CollisionShape property with an array inside it.
+Collision shapes are defined within a dictionary property in the glTF scene description file, by adding an extensions property to the top-level glTF 2.0 object and defining a ULTRA_collision_shape property with an array inside it.
 
 Each collision shape defines a mandatory type property that designates the type of shape (box, cylinder, cone, capsule, sphere, mesh, or convex_hull). The following example defines a box with dimensions of one unit:
 
 ```json
 "extensions": {
-    "ULTRA_CollisionShape" : {
+    "ULTRA_collision_shape" : {
         "coliisionShapes": [
             {
                 "size": [
@@ -41,13 +41,13 @@ Each collision shape defines a mandatory type property that designates the type 
 
 ## Adding Collision Shape Instances to Nodes
 
-Collision shapes must be attached to a node by defining the extensions.ULTRA_CollisionShape property and, within that, an index into the collision shapes array using the collisionShape property.
+Collision shapes must be attached to a node by defining the extensions.ULTRA_collision_shape property and, within that, an index into the collision shapes array using the collisionShape property.
 
 ```json
 "nodes" : [
     {
         "extensions" : {
-            "ULTRA_CollisionShape" : {
+            "ULTRA_collision_shape" : {
                 "collisionShape" : 0
             }
         }
