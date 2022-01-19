@@ -20,7 +20,7 @@ This extension adds support for collision shapes attached to a glTF node, for ph
 
 Collision shapes are defined within a dictionary property in the glTF scene description file, by adding an extensions property to the top-level glTF 2.0 object and defining a ULTRA_CollisionShape property with an array inside it.
 
-Each light defines a mandatory type property that designates the type of light (directional, point or spot). The following example defines a white-colored directional light.
+Each collision shape defines a mandatory type property that designates the type of shape (box, cylinder, cone, capsule, sphere, mesh, or convex_hull). The following example defines a box with dimensions of one unit:
 
 ```json
 "extensions": {
@@ -55,7 +55,7 @@ Collision shapes must be attached to a node by defining the extensions.ULTRA_Col
 ]
 ```
 
-The collision shape will inherit the transform of the node, including scale. Scale may be non-uniform.
+The collision shape will inherit the transform of the node, including scale. Scale may be non-uniform. If the position or rotation properties are present in the collision shape definition, those will be used to further orient the shape in node space.
 
 ## Collision Shape Properties
 
@@ -79,6 +79,8 @@ The following collision shapes are supported:
 - mesh
 
 For cylinder, cone, and capsule shapes, the Y axis is the axis of the shape, with the cone tip pointing in the positive direction.
+
+## Mesh and Convex Hull Definitions
 
 For mesh and convex hull shapes, the vertices value is an index of a buffer view. The buffer view must specify three FLOAT values per vertex. The faces value is an index to an buffer view of integers with type INT8, INT32, or INT64. The format os the indices buffer view is as follows:
 
