@@ -99,12 +99,15 @@ Mesh and convex hull shape definitions use two additional properties:
 
 | Property | Description | Required |
 |---|---|---|
+| faceIndices | Specified the number of indices per face. | No |
 | faces | Specifies an accessor that points to vertex data. | :white_check_mark: Yes |
 | vertices | Specifies an accessor that points to face indice data. | :white_check_mark: Yes |
 
 The vertices accessor specifies three float values per vertex.
 
-The faces accessor must be made up of unsigned bytes, unsigned shorts, or unsigned integers. Each face starts with the number of indices in the face, followed by that number of indices:
+The faces accessor must be made up of unsigned bytes, unsigned shorts, or unsigned integers. If the faceIndices property is present, each face will have the same number of indices.
+
+If the faceIndices property is not present, each face starts with the number of indices in the face, followed by that number of indices:
 
 *numIndices, indices0, indice1...indiceN*
 
