@@ -14,7 +14,7 @@ Written against the glTF 2.0 spec.
 
 ## Overview
 
-This extension specifies collision shapes associated with a glTF node, for physics simulations and raycasting.
+This extension adds support for collision shapes attached to a glTF node, for physics simulations and raycasting.
 
 For mesh and convex hull shapes, the vertices value is an index of a buffer view. The buffer view must specify three FLOAT values per vertex. The faces value is an index to an buffer view of integers with type INT8, INT32, or INT64. The format os the indices buffer view is as follows:
 
