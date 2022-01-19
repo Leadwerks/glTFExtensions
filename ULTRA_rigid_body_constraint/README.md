@@ -1,4 +1,4 @@
-# ULTRA_RigidBodyConstraints
+# ULTRA_rigid_body_constraint
 
 This extension adds constraints to glTF nodes, for "ragdoll" effects or other physics simulations.
 
