@@ -22,7 +22,7 @@ Collision shapes are defined within a dictionary property in the glTF scene desc
 
 Each light defines a mandatory type property that designates the type of light (directional, point or spot). The following example defines a white-colored directional light.
 
-```
+```json
 "extensions": {
     "ULTRA_CollisionShape" : {
         "coliisionShapes": [
@@ -39,6 +39,47 @@ Each light defines a mandatory type property that designates the type of light (
 }
 ```
 
+## Adding Collision Shape Instances to Nodes
+
+Collision shapes must be attached to a node by defining the extensions.ULTRA_CollisionShape property and, within that, an index into the collision shapes array using the collisionShape property.
+
+```json
+"nodes" : [
+    {
+        "extensions" : {
+            "ULTRA_CollisionShape" : {
+                "collisionShape" : 0
+            }
+        }
+    }            
+]
+```
+
+The collision shape will inherit the transform of the node, including scale. Scale may be non-uniform.
+
+## Collision Shape Properties
+
+| Property | Description | Required |
+|---|---|---|
+| type | Declares the type of the collision shape. | :white_check_mark: Yes |
+| size | Specifies the width, height, and depth. | :white_check_mark: Yes |
+| rotation | Euler or quaternion rotational offset | No |
+| position | Specifies the offset of the shape when attached to a node | No |
+
+## Collision Shape Types
+
+The following collision shapes are supported:
+
+- box
+- cylinder
+- cone
+- capsule
+- sphere
+- convex_hull
+- mesh
+
+For cylinder, cone, and capsule shapes, the Y axis is the axis of the shape, with the cone tip pointing in the positive direction.
+
 For mesh and convex hull shapes, the vertices value is an index of a buffer view. The buffer view must specify three FLOAT values per vertex. The faces value is an index to an buffer view of integers with type INT8, INT32, or INT64. The format os the indices buffer view is as follows:
 
 ```numIndices, indices0, indice1...indiceN```
@@ -49,14 +90,7 @@ For cylinder and cone shapes, the Y axis is the axis around which the shape is "
 
 Rotation can use four components to specicify a quaternion, or three components to specify Euler rotation.
 
-Shape is a string value, and can be any of the following:
-- BOX
-- CYLINDER
-- CONE
-- CAPSULE
-- SPHERE
-- CONVEX_HULL
-- MESH
+
 
 Alternatively, a 4x4 matrix can be used to specify the rotation and offset. If a matrix is used, the matrix must be normalized, and the size parameter must still be included.
 
