@@ -61,10 +61,10 @@ The collision shape will inherit the transform of the node, including scale. Sca
 
 | Property | Description | Required |
 |---|---|---|
+| position | Specifies the offset of the shape when attached to a node | No |
+| rotation | Euler or quaternion rotational offset | No |
 | type | Declares the type of the collision shape. | :white_check_mark: Yes |
 | size | Specifies the width, height, and depth. | :white_check_mark: Yes |
-| rotation | Euler or quaternion rotational offset | No |
-| position | Specifies the offset of the shape when attached to a node | No |
 
 ## Collision Shape Types
 
@@ -86,8 +86,8 @@ Mesh and convex hull shape definitions use two additional properties:
 
 | Property | Description | Required |
 |---|---|---|
-| vertices | Specifies a bufferview where vertices are stored. | :white_check_mark: Yes |
 | faces | Specifies a bufferview where face indices are stored. | :white_check_mark: Yes |
+| vertices | Specifies a bufferview where vertices are stored. | :white_check_mark: Yes |
 
 The vertices bufferview must specify three FLOAT values per vertex.
 
