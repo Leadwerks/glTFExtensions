@@ -100,7 +100,7 @@ Mesh and convex hull shape definitions use two additional properties:
 | Property | Description | Required |
 |---|---|---|
 | faces | Specifies an accessor that points to vertex data. | :white_check_mark: Yes |
-| vertices | Specifies a accessor that points to face indice data. | :white_check_mark: Yes |
+| vertices | Specifies an accessor that points to face indice data. | :white_check_mark: Yes |
 
 The vertices accessor specifies three float values per vertex.
 
