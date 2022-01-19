@@ -106,6 +106,6 @@ The vertices accessor specifies three float values per vertex.
 
 The faces accessor must be made up of unsigned bytes, unsigned shorts, or unsigned integers. Each face starts with the number of indices in the face, followed by that number of indices:
 
-```numIndices, indices0, indice1...indiceN```
+*numIndices, indices0, indice1...indiceN*
 
 Each face can specify three or more indices.
